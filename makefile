@@ -1,5 +1,5 @@
 build:
-	@gcc -o main main.c
+	@gcc dataset.c main.c -o main
 
 run:
 	@./main
