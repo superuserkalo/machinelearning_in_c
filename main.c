@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 #include "dataset.h"
 
 // Notations:
@@ -14,6 +15,8 @@
 // hth(x) = for (j=0,j<=m,j++) {thj*xj}
 
 // x0 = const 1 its a dummy feautre to allow us to use a vector formular for the linear regression
+// alpha being the learning rate
+// iterations how many times we apply the gradient descend
 #define x0 1.0
 #define alpha 0.000001
 #define iterations 10000000
@@ -23,6 +26,9 @@ double cost(double theta0, double theta1);
 void batch_gd(double *theta0, double *theta1);
 
 int main(){
+  // starting at a null vector of Zero = -> over 0
+  // in the case of linear regression it does not matter where we start
+  // because with gradient descend there is no local optima / there is only global optima
   double theta0 = 0.00;
   double theta1 = 0.00;
 
